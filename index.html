@@ -11,250 +11,236 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+  <meta name="description" content="S Jasmitha | AI & Data Science student portfolio">
+
   <style>
+    html { scroll-behavior: smooth; }
+
     .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
     }
+
     .glass {
-      backdrop-filter: blur(12px);
-      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.8);
     }
+
     .reveal {
       opacity: 0;
       transform: translateY(40px);
       transition: all 0.8s ease;
     }
+
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
+
     .card-hover {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.4s ease;
     }
+
     .card-hover:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 25px 50px rgba(99,102,241,0.25);
     }
+
     .skill-fill {
-      animation: fillBar 1.5s ease forwards;
+      animation: fillBar 1.8s ease forwards;
     }
+
     @keyframes fillBar {
       from { width: 0; }
+    }
+
+    .float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(99,102,241,0.6); }
+      70% { box-shadow: 0 0 0 12px rgba(99,102,241,0); }
+      100% { box-shadow: 0 0 0 0 rgba(99,102,241,0); }
     }
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white font-sans">
+<body class="bg-gradient-to-br from-gray-100 via-white to-indigo-50 text-gray-800 font-sans">
 
 <!-- HERO -->
 <section class="gradient-bg py-20 px-6 text-center">
   <div class="max-w-4xl mx-auto reveal">
 
-    <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white/30 shadow-xl">
+    <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-indigo-300 shadow-xl float">
       <img src="profile.jpg" alt="S Jasmitha" class="w-full h-full object-cover">
     </div>
 
     <h1 class="text-5xl font-bold">S Jasmitha</h1>
-    <p class="text-2xl mt-2 opacity-90">Personal Portfolio</p>
 
-    <p class="mt-6 text-lg leading-relaxed max-w-2xl mx-auto">
-      Final-year B.Tech student specializing in Artificial Intelligence and Data Science.
-      Interested in technology, problem-solving, and continuous learning.
+    <p class="text-2xl mt-2 text-indigo-600 font-medium">
+      <span id="typing"></span>
+    </p>
+
+    <p class="mt-6 text-lg max-w-2xl mx-auto">
+      Final-year B.Tech student specializing in Artificial Intelligence and Data Science,
+      passionate about Machine Learning and Data Analysis.
     </p>
 
     <div class="mt-8 flex flex-wrap gap-4 justify-center">
       <a href="Jasmitha_resume.pdf" download
-         class="bg-white text-purple-600 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+        class="bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold pulse">
         📄 Download Resume
       </a>
 
-      <a href="https://www.linkedin.com/in/jasmitha-reddy-8478452b4" target="_blank"
-         class="bg-white/20 px-6 py-3 rounded-xl hover:bg-white/30 transition">
+      <a href="https://www.linkedin.com" target="_blank"
+        class="bg-indigo-100 px-6 py-3 rounded-xl">
         <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+
+      <a href="https://github.com" target="_blank"
+        class="bg-indigo-100 px-6 py-3 rounded-xl">
+        <i class="fab fa-github"></i> GitHub
       </a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- EDUCATION -->
 <section class="py-20 px-6 reveal">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-6">About Me</h2>
-    <p class="text-lg leading-relaxed opacity-90">
-      I am currently pursuing a Bachelor of Technology in Artificial Intelligence
-      and Data Science at The Apollo University, Chittoor.
-      <br><br>
-      I enjoy exploring programming concepts, understanding data, and applying analytical
-      thinking to solve real-world problems. I am self-motivated, adaptable, and eager
-      to grow both technically and professionally.
-    </p>
+    <h2 class="text-4xl font-bold mb-8">Education</h2>
+
+    <div class="space-y-6 text-left">
+      <div class="glass p-8 rounded-3xl card-hover">
+        <h3 class="text-2xl font-semibold">B.Tech – AI & Data Science</h3>
+        <p class="text-indigo-600">The Apollo University, Chittoor</p>
+        <p class="text-sm text-gray-600">2022 – 2026</p>
+      </div>
+
+      <div class="glass p-8 rounded-3xl card-hover">
+        <h3 class="text-2xl font-semibold">Intermediate (MPC)</h3>
+        <p class="text-indigo-600">NRI Junior College, Tirupati</p>
+        <p class="text-sm text-gray-600">2020 – 2022</p>
+        <p class="mt-2">Secured <strong>94%</strong></p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section class="py-20 px-6 bg-white/5 reveal">
+<section class="py-20 px-6 bg-white/60 reveal">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-4xl font-bold text-center mb-12">Skills</h2>
 
     <div class="space-y-6">
       <div>
-        <span>Python</span>
-        <div class="w-full bg-gray-700 rounded-full h-3 mt-2">
+        <div class="flex justify-between">
+          <span>Python</span><span>85%</span>
+        </div>
+        <div class="bg-gray-300 h-3 rounded-full">
           <div class="bg-indigo-500 h-3 rounded-full skill-fill" style="width:85%"></div>
         </div>
       </div>
 
       <div>
-        <span>SQL</span>
-        <div class="w-full bg-gray-700 rounded-full h-3 mt-2">
+        <div class="flex justify-between">
+          <span>SQL</span><span>80%</span>
+        </div>
+        <div class="bg-gray-300 h-3 rounded-full">
           <div class="bg-pink-500 h-3 rounded-full skill-fill" style="width:80%"></div>
         </div>
       </div>
 
       <div>
-        <span>Machine Learning (Basics)</span>
-        <div class="w-full bg-gray-700 rounded-full h-3 mt-2">
+        <div class="flex justify-between">
+          <span>Machine Learning</span><span>70%</span>
+        </div>
+        <div class="bg-gray-300 h-3 rounded-full">
           <div class="bg-green-500 h-3 rounded-full skill-fill" style="width:70%"></div>
         </div>
       </div>
-
-      <div>
-        <span>Communication & Problem Solving</span>
-        <div class="w-full bg-gray-700 rounded-full h-3 mt-2">
-          <div class="bg-yellow-500 h-3 rounded-full skill-fill" style="width:85%"></div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- TECHNICAL TOPICS -->
-<section class="py-16 px-6 bg-white/5 reveal">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10">Technical Topics</h2>
+<!-- TOOLS -->
+<section class="py-20 px-6 reveal">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-12">Tools & Technologies</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="glass p-6 rounded-2xl card-hover">
-        <h3 class="text-xl font-semibold mb-3">
-          <i class="fab fa-python text-yellow-400 mr-2"></i>Python
-        </h3>
-        <ul class="space-y-1 text-lg opacity-90">
-          <li>• Data types & control statements</li>
-          <li>• Functions & file handling</li>
-          <li>• Lists & dictionaries</li>
-          <li>• Basics of OOP</li>
-        </ul>
-      </div>
-
-      <div class="glass p-6 rounded-2xl card-hover">
-        <h3 class="text-xl font-semibold mb-3">
-          <i class="fas fa-database text-blue-400 mr-2"></i>SQL
-        </h3>
-        <ul class="space-y-1 text-lg opacity-90">
-          <li>• SELECT, WHERE</li>
-          <li>• Joins (Inner, Left)</li>
-          <li>• Aggregate functions</li>
-          <li>• Subqueries</li>
-        </ul>
-      </div>
-
-      <div class="glass p-6 rounded-2xl card-hover">
-        <h3 class="text-xl font-semibold mb-3">
-          <i class="fas fa-brain text-pink-400 mr-2"></i>Machine Learning
-        </h3>
-        <ul class="space-y-1 text-lg opacity-90">
-          <li>• Supervised & unsupervised learning</li>
-          <li>• Linear & logistic regression</li>
-          <li>• Decision tree & random forest</li>
-          <li>• Model evaluation basics</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="py-20 px-6 reveal">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold mb-10">Experience</h2>
-
-    <div class="glass p-8 rounded-3xl card-hover">
-      <h3 class="text-2xl font-semibold">Intern</h3>
-      <p class="text-blue-400">Hachidori Robotics Pvt. Ltd.</p>
-      <ul class="mt-4 space-y-2 text-lg">
-        <li>• Worked with real-world datasets</li>
-        <li>• Performed data cleaning and analysis</li>
-        <li>• Developed Python scripts for insights</li>
-        <li>• Gained exposure to industry workflows</li>
-        <li>• Documented findings and communicated insights to the team</li>
-      </ul>
+      <div class="glass p-6 rounded-2xl card-hover">Python, SQL</div>
+      <div class="glass p-6 rounded-2xl card-hover">Pandas, NumPy, Matplotlib</div>
+      <div class="glass p-6 rounded-2xl card-hover">Excel, Power BI, GitHub</div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="py-20 px-6 bg-white/5 reveal">
+<section class="py-20 px-6 bg-white/60 reveal">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-4xl font-bold mb-12">Projects</h2>
 
     <div class="grid md:grid-cols-2 gap-6">
-
       <div class="glass p-6 rounded-2xl card-hover">
-        <h3 class="text-xl font-semibold">Flight Data Analysis</h3>
-        <ul class="mt-2 space-y-1 opacity-90">
-          <li>• Analyzed airline datasets to identify trends</li>
-          <li>• Observed delay and cancellation patterns</li>
+        <h3 class="font-semibold text-xl">Netflix Recommendation System</h3>
+        <ul class="mt-2">
+          <li>• Collaborative filtering based recommendations</li>
+          <li>• Improved content suggestions</li>
         </ul>
       </div>
 
       <div class="glass p-6 rounded-2xl card-hover">
-        <h3 class="text-xl font-semibold">Multimodal Emotion Detection</h3>
-        <ul class="mt-2 space-y-1 opacity-90">
-          <li>• Analyzed emotions using facial and text data</li>
-          <li>• Applied basic machine learning techniques</li>
+        <h3 class="font-semibold text-xl">Sentiment Analysis on Customer Reviews</h3>
+        <ul class="mt-2">
+          <li>• Classified reviews using ML models</li>
+          <li>• Extracted customer sentiment trends</li>
         </ul>
       </div>
-
-      <div class="glass p-6 rounded-2xl card-hover">
-        <h3 class="text-xl font-semibold">Rock-Paper-Scissors Game</h3>
-        <ul class="mt-2 space-y-1 opacity-90">
-          <li>• Developed a Python-based GUI game</li>
-          <li>• Implemented user interaction and game logic</li>
-        </ul>
-      </div>
-
     </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="py-20 px-6 reveal">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-8">Certifications</h2>
-    <ul class="text-lg space-y-3">
-      <li>🏅 NPTEL – Data Science for Engineers</li>
-      <li>🏅 Internship Completion – Hachidori Robotics Pvt. Ltd.</li>
-    </ul>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="gradient-bg py-12 text-center">
-  <p class="text-lg">© 2025 S Jasmitha. All rights reserved.</p>
+  <p class="font-semibold">📞 6304814110</p>
+  <p class="mt-2">© 2025 S Jasmitha</p>
 </footer>
 
-<!-- SCROLL SCRIPT -->
 <script>
-  const reveals = document.querySelectorAll(".reveal");
-  window.addEventListener("scroll", () => {
-    reveals.forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-        el.classList.add("active");
-      }
-    });
+const text = "AI & Data Science Student | Machine Learning Enthusiast";
+let i = 0;
+const typingEl = document.getElementById("typing");
+
+function typeEffect() {
+  if (i < text.length) {
+    typingEl.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 70);
+  }
+}
+typeEffect();
+
+const reveals = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+  reveals.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
   });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 </script>
 
 </body>
